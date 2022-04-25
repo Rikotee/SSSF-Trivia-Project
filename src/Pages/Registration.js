@@ -1,25 +1,23 @@
 import React, { useState } from "react";
-import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Link} from "react-router-dom";
 
-const Login = ({ setToken }) => {
+
+const Registration = () => {
 
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const token = await loginUser({
+    await registerUser({
       username,
       password
     });
-    setToken(token);
-  }
 
+  }
 
   return(
     <div className="login-wrapper">
-      <h1>Please Log In</h1>
+      <h1>Please Register</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
@@ -31,21 +29,13 @@ const Login = ({ setToken }) => {
         </label>
         <div>
           <button type="submit">Submit</button>
-
         </div>
-          <Router>
-          <Link to="/registration">Registration</Link>
-{/*             <Routes>
-            <Route path="/registration" element={<Registration />} />
-            </Routes> */}
-          </Router>
-
       </form>
     </div>
   )
 }
 
- const loginUser = async (credentials) => {
+ const registerUser = async (credentials) => {
    const username = credentials.username
    const password = credentials.password
   const options = {
@@ -56,12 +46,10 @@ const Login = ({ setToken }) => {
     },
     body: JSON.stringify({ query: 
       `
-      {
-        login(username: "${username}", password: "${password}") {
+      mutation RegisterUser {
+        registerUser(username: "${username}", password: "${password}") {
           id
           username
-          highscore
-          token
         }
       }
       `
@@ -71,16 +59,12 @@ const Login = ({ setToken }) => {
   try {
     const response = await fetch("http://localhost:3000/graphql/", options);
     const json = await response.json();
-    console.log(json.data.login)
-    return json.data.login;
+    console.log(json)
   } catch (e) {
     console.log(e);
     return false;
   }
 };
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-}
 
-export default Login;
+export default Registration;
