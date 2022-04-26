@@ -11,6 +11,10 @@ export default gql`
     registerUser(username: String!, password: String!, highscore: Int! = 0): User
   }
 
+  extend type Mutation {
+    modifyHighscore(id: ID!, highscore: Int! = 0): User
+  }
+
   type User {
     id: ID
     username: String

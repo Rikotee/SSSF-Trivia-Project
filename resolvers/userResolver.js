@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import User from '../models/userModel';
 import { login } from '../utils/auth';
+import { AuthenticationError } from 'apollo-server-express';
 
 export default {
   Query: {
@@ -39,6 +40,12 @@ export default {
       } catch (err) {
         throw new Error(err);
       }
+    },
+    modifyHighscore: async (parent, args, context) => {
+      if (!context.user) {
+        throw new AuthenticationError('Not authorised');
+      }
+      return await User.findByIdAndUpdate(args.id, args, { new: true });
     },
   },
 };

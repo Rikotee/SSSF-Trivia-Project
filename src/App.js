@@ -16,7 +16,7 @@ const App = () => {
 
   if(!token) {
     console.log(token)
-    return <Registration setToken={setToken} />
+    return <Login setToken={setToken} />
   }
 
   return (

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import Registration from "./Registration";
+import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 
 const Login = ({ setToken }) => {
 
@@ -33,14 +34,18 @@ const Login = ({ setToken }) => {
           <button type="submit">Submit</button>
 
         </div>
-          <Router>
-          <Link to="/registration">Registration</Link>
-{/*             <Routes>
-            <Route path="/registration" element={<Registration />} />
-            </Routes> */}
-          </Router>
+
 
       </form>
+      <Router>
+            <nav>
+              <Link to="/registration">Registration</Link>
+            </nav>
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/registration" element={<Registration />} />
+            </Routes>
+      </Router>
     </div>
   )
 }
