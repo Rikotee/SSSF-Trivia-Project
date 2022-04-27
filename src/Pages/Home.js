@@ -6,11 +6,11 @@ const Home = () => {
             <h1>
                 Welcome to my Website
             </h1>
-            <button
+{/*             <button
             onClick={() => {
                 console.log('test')
             }}
-            > test to console</button>
+            > test to console</button> */}
         </div>
     )
 }

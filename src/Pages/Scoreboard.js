@@ -1,22 +1,22 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import styled from 'styled-components/macro'
+
+const Intro = styled.div`
+  margin-top: 8em;
+  text-align: center;
+`;
 
 function Scoreboard(){
     const users = useLaunches()
-    let navigate = useNavigate();
     return(
+      <Intro>
         <div>
             THIS IS THE SCOREBOARD PAGE!
-            <button
-            onClick={() => {
-                navigate("/home")
-            }}
-            > Change to home page</button>
                         <div> {users.map(user => (
               <li key={user.id}>{user.username} highscore: {user.highscore}</li>
             ))} </div>
         </div>
-        
+              </Intro>
     )
 }
 

@@ -14,6 +14,7 @@ const Points = styled.p`
 const GameOver = ({pts}) => {
 
     const refreshPage = () => window.location.reload();
+    console.log(pts)
 
     return (
         <>

@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Registration from "./Registration";
 import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import styled, { css } from 'styled-components/macro'
+import Button from "../components/Button";
+
+const Intro = styled.div`
+  margin-top: 8em;
+  text-align: center;
+`;
+
+const btnCSS = css`
+    margin-top: 2em;
+`;
 
 const Login = ({ setToken }) => {
 
@@ -19,6 +30,9 @@ const Login = ({ setToken }) => {
 
 
   return(
+    <Intro>
+
+
     <div className="login-wrapper">
       <h1>Please Log In</h1>
       <form onSubmit={handleSubmit}>
@@ -31,7 +45,7 @@ const Login = ({ setToken }) => {
           <input type="password" onChange={e => setPassword(e.target.value)}/>
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <Button type="submit" css={btnCSS}>Submit</Button>
 
         </div>
 
@@ -47,6 +61,7 @@ const Login = ({ setToken }) => {
             </Routes>
       </Router>
     </div>
+        </Intro>
   )
 }
 
