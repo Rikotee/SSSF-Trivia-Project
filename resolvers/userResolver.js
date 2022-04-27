@@ -41,10 +41,14 @@ export default {
         throw new Error(err);
       }
     },
-    modifyHighscore: async (parent, args, context) => {
+/*     modifyHighscore: async (parent, args, context) => {
       if (!context.user) {
         throw new AuthenticationError('Not authorised');
       }
+      return await User.findByIdAndUpdate(args.id, args, { new: true });
+    }, */
+    modifyHighscore: async (parent, args, context) => {
+
       return await User.findByIdAndUpdate(args.id, args, { new: true });
     },
   },
