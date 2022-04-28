@@ -4,6 +4,9 @@ import Registration from "./Registration";
 import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import styled, { css } from 'styled-components/macro'
 import Button from "../components/Button";
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
 
 const Intro = styled.div`
   margin-top: 5em;
@@ -15,6 +18,7 @@ const btnCSS = css`
 `;
 
 const Login = ({ setToken }) => {
+
 
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
@@ -92,9 +96,13 @@ const Login = ({ setToken }) => {
     const response = await fetch("http://localhost:3000/graphql/", options);
     const json = await response.json();
     console.log(json.data.login)
-    return json.data.login;
+    if(json.data.login == null){
+      toast("check your username or password!")
+    }else{
+          return json.data.login;
+    }
   } catch (e) {
-    console.log(e);
+    console.log("error: ", e);
     return false;
   }
 };
