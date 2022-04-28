@@ -12,14 +12,16 @@ function Scoreboard(){
     const usersS = usersF.sort(function (a, b) {
       return b.highscore - a.highscore;
     });
-    const users = usersS.slice(0, 5)
+    const users = usersS.slice(0, 10)
 
     return(
       <Intro>
         <div>
-            THIS IS THE SCOREBOARD PAGE!
+             TOP 10! 
+             <br />
+             <br />
               <div> {users.map(user => (
-              <li key={user.id}>{user.username} highscore: {user.highscore}</li>
+              <li key={user.id}>{user.username} - highscore: {user.highscore}</li>
             ))} </div>
         </div>
               </Intro>
