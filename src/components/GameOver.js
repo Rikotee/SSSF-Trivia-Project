@@ -38,6 +38,7 @@ const addHighscore = async (pts) => {
    const options = {
      method: 'POST',
      headers: {
+       Authorization: `Bearer ${myObj.token}`,
        'Content-Type': 'application/json',
        Accept: 'application/json',
      },
