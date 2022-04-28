@@ -12,7 +12,7 @@ function Scoreboard(){
       <Intro>
         <div>
             THIS IS THE SCOREBOARD PAGE!
-                        <div> {users.map(user => (
+              <div> {users.map(user => (
               <li key={user.id}>{user.username} highscore: {user.highscore}</li>
             ))} </div>
         </div>
@@ -29,7 +29,6 @@ const USERS_QUERY = `
   }
 }
 `
-
 
 const useLaunches = () => {
     const [users, setUsers] = React.useState([]);
