@@ -7,7 +7,13 @@ const Intro = styled.div`
 `;
 
 function Scoreboard(){
-    const users = useLaunches()
+    const usersNotFiltered = useLaunches()
+    const usersF = usersNotFiltered.filter(obj=> obj.highscore >= 0.1);
+    const usersS = usersF.sort(function (a, b) {
+      return b.highscore - a.highscore;
+    });
+    const users = usersS.slice(0, 5)
+
     return(
       <Intro>
         <div>
@@ -22,7 +28,7 @@ function Scoreboard(){
 
 const USERS_QUERY = `
 {
-  users(limit: 10) {
+  users {
     id
     username
     highscore
