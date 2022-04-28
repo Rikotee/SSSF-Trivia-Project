@@ -98,8 +98,9 @@ const Login = ({ setToken }) => {
     console.log(json.data.login)
     if(json.data.login == null){
       toast("check your username or password!")
+      return json.data.login;
     }else{
-          return json.data.login;
+      return json.data.login;
     }
   } catch (e) {
     console.log("error: ", e);
