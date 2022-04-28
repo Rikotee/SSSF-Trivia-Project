@@ -11,9 +11,10 @@ import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import useToken from './components/useToken';
 import styled, { css } from 'styled-components/macro'
 import Button from './components/Button';
+/* import logo from './components/image/logo.png'; */
 
 const Intro = styled.div`
-  margin-top: 8em;
+  margin-top: 1em;
   text-align: center;
 `;
 
@@ -31,6 +32,8 @@ const App = () => {
 
   return (
     <Intro>
+
+{/*             <img src={logo}  alt="Logo" /> */}
 
             <Button onClick={() => {
               localStorage.clear();

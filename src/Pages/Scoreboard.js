@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components/macro'
 
 const Intro = styled.div`
-  margin-top: 8em;
+  margin-top: 3em;
   text-align: center;
 `;
 

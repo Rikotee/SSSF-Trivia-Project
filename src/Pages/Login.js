@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components/macro'
 import Button from "../components/Button";
 
 const Intro = styled.div`
-  margin-top: 8em;
+  margin-top: 5em;
   text-align: center;
 `;
 

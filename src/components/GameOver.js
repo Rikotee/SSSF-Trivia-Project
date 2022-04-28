@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Button} from './Button'
 
 const Title = styled.h1`
-    margin-top: 4em;
+    margin-top: 3em;
     font-size: 48px;
 `;
 
@@ -30,11 +30,6 @@ const GameOver = ({pts}) => {
 const addHighscore = async (pts) => {
 
     fetchHighscore().then(function(result){
-        console.log("result: ", result)
-
-
-
-
      if(pts >= result) { 
 
     var x = localStorage.getItem("token");

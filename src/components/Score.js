@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components/macro'
 import Button from './Button';
 
 const Intro = styled.div`
-  margin-top: 8em;
+  margin-top: 3em;
   text-align: center;
 `;
 
