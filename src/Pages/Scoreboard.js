@@ -42,9 +42,13 @@ const useLaunches = () => {
     const [users, setUsers] = React.useState([]);
 
     React.useEffect(() => {
+      var x = localStorage.getItem("token");
+      const myObj = JSON.parse(x);
+
       fetch("http://localhost:3000/graphql/", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {Authorization: `Bearer ${myObj.token}`,
+      "Content-Type": "application/json" },
       body: JSON.stringify({ query: USERS_QUERY})
       }).then(response => response.json())
       .then(data => setUsers(data.data.users))

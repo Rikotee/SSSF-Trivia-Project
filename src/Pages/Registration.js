@@ -1,4 +1,18 @@
 import React, { useState } from "react"
+import styled, { css } from 'styled-components/macro'
+import Button from "../components/Button";
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
+
+const Intro = styled.div`
+  margin-top: 5em;
+  text-align: center;
+`;
+
+const btnCSS = css`
+    margin-top: 2em;
+`;
 
 const Registration = () => {
 
@@ -15,6 +29,7 @@ const Registration = () => {
   }
 
   return(
+    <Intro>
     <div className="login-wrapper">
       <h1>Please Register</h1>
       <form onSubmit={handleSubmit}>
@@ -27,10 +42,11 @@ const Registration = () => {
           <input type="password" onChange={e => setPassword(e.target.value)} maxLength={20}/>
         </label>
         <div>
-          <button type="submit">Submit</button>
+        <Button type="submit" css={btnCSS}>Submit</Button>
         </div>
       </form>
     </div>
+    </Intro>
   )
 }
 
@@ -59,6 +75,9 @@ const Registration = () => {
     const response = await fetch("http://localhost:3000/graphql/", options);
     const json = await response.json();
     console.log(json)
+    if(json.data.registerUser == null){
+      toast("Try another username or password!")
+    }
   } catch (e) {
     console.log(e);
     return false;

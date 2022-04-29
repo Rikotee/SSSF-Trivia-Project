@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Registration from "./Registration";
-import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import styled, { css } from 'styled-components/macro'
 import Button from "../components/Button";
 import {toast} from 'react-toastify';
@@ -19,9 +18,9 @@ const btnCSS = css`
 
 const Login = ({ setToken }) => {
 
-
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [show, setShow] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -32,11 +31,8 @@ const Login = ({ setToken }) => {
     setToken(token);
   }
 
-
   return(
     <Intro>
-
-
     <div className="login-wrapper">
       <h1>Please Log In</h1>
       <form onSubmit={handleSubmit}>
@@ -52,18 +48,12 @@ const Login = ({ setToken }) => {
           <Button type="submit" css={btnCSS}>Submit</Button>
 
         </div>
-
-
       </form>
-      <Router>
-            <nav>
-              <Link to="/registration">Registration</Link>
-            </nav>
-            <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/registration" element={<Registration />} />
-            </Routes>
-      </Router>
+
+      <li className="menu__icon" onClick={() => setShow(true)}>
+      <h4>Need to sign in? Click here!</h4>
+        { show ? <Registration/> : null }
+        </li>
     </div>
         </Intro>
   )
