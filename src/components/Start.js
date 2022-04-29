@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components/macro'
 import Button from './Button';
 
 const Intro = styled.div`
-  margin-top: 3em;
+  margin-top: 2em;
   text-align: center;
 `;
 
@@ -18,8 +18,6 @@ const Start = ({props}) => {
  
     return (
         <Intro>
-            <h1>Take the quiz.</h1>
-            <h4>Whenever, you want.</h4>
             <Button onClick={startQuiz} css={btnCSS}>Begin</Button>
         </Intro>
     )

@@ -69,34 +69,28 @@ const Quiz = () => {
         axios.get('https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple')
             .then(res => {
                 setQuiz(res.data.results.map(item => (
-
                     {
                         question: item.question,
                         options: shuffle([...item.incorrect_answers, item.correct_answer]),
                         answer: item.correct_answer
                     }
-
                 )));
             })
             .catch(err => console.error(err))
-
     }, []);
 
 
     return (
         <QuizWindow>
             { quiz[number] &&
-
                 <>
                     <Question dangerouslySetInnerHTML={{ __html: quiz[number].question }}></Question>
-
                     <Options>
                         {quiz[number].options.map((item, index) => (
                             <Option key={index} dangerouslySetInnerHTML={{ __html: item }} onClick={pickAnswer}></Option>
                         ))}
                     </Options>
                 </>
-
             }
             {
                 number === 5 && <GameOver pts={pts} />

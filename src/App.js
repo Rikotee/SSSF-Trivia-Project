@@ -5,6 +5,7 @@ import ErrorPage from './Pages/ErrorPage';
 import Login from './Pages/Login';
 import Scoreboard from './Pages/Scoreboard';
 import Trivia from './Pages/Trivia';
+import TriviaSD from './Pages/TriviaSD';
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import useToken from './components/useToken';
 import styled, { css } from 'styled-components/macro'
@@ -24,7 +25,7 @@ const App = () => {
   const { token, setToken } = useToken();
 
   if(!token) {
-    console.log(token)
+    //console.log(token)
     return <Login setToken={setToken} />
   }
 
@@ -41,13 +42,15 @@ const App = () => {
             <nav>
               <Link to="/"> Home </Link>
               <Link to="/scoreboard"> Scoreboard </Link>
-              <Link to="/trivia"> Trivia </Link>
+              <Link to="/trivia"> 5 Questions </Link>
+              <Link to="/triviasd"> Sudden Death </Link>
             </nav>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/scoreboard" element={<Scoreboard />} />
               <Route path="/trivia" element={<Trivia />} />
+              <Route path="/triviasd" element={<TriviaSD />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
             <div>
