@@ -40,10 +40,19 @@ const App = () => {
               }} css={btnCSS}>Logout</Button>
           <Router>
             <nav>
-              <Link to="/"> Home </Link>
-              <Link to="/scoreboard"> Scoreboard </Link>
-              <Link to="/trivia"> 5 Questions </Link>
-              <Link to="/triviasd"> Sudden Death </Link>
+              <Link to="/">  Home  </Link>
+              <br />
+              <Link to="/scoreboard">
+                  <Button css={btnCSS}> Scoreboard! </Button>
+              </Link>
+
+              <Link to="/trivia">
+                  <Button css={btnCSS}> 5 Questions! </Button>
+              </Link>
+
+              <Link to="/triviasd">
+                  <Button css={btnCSS}> Sudden Death! </Button>
+              </Link>
             </nav>
             <Routes>
               <Route path="/" element={<Home />} />
