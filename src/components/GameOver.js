@@ -55,7 +55,7 @@ const addHighscore = async (pts) => {
      }),
    };
    try {
-     const response =  fetch("http://localhost:3000/graphql/", options);
+     const response =  fetch("https://env-4867079.jelastic.metropolia.fi/graphql/", options);
      const json = response.json();
      console.log(json)
    } catch (e) {
@@ -86,7 +86,7 @@ const addHighscore = async (pts) => {
      }),
    };
    try {
-     const response = await fetch("http://localhost:3000/graphql/", options);
+     const response = await fetch("https://env-4867079.jelastic.metropolia.fi/graphql/", options);
      const json = await response.json();
      return json.data.user.highscore;
    } catch (e) {

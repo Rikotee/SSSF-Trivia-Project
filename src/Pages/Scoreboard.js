@@ -41,7 +41,7 @@ const useLaunches = () => {
       var x = localStorage.getItem("token");
       const myObj = JSON.parse(x);
 
-      fetch("http://localhost:3000/graphql/", {
+      fetch("https://env-4867079.jelastic.metropolia.fi/graphql/", {
       method: "POST",
       headers: {Authorization: `Bearer ${myObj.token}`,
       "Content-Type": "application/json" },
