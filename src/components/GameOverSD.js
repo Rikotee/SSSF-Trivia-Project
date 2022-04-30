@@ -11,7 +11,7 @@ const Points = styled.p`
     margin-bottom: 3em;
 `;
 
-const GameOver = ({pts}) => {
+const GameOverSD = ({pts}) => {
 
     const refreshPage = () => {
         addHighscore(pts);
@@ -21,7 +21,7 @@ const GameOver = ({pts}) => {
     return (
         <>
             <Title>Game Over</Title>
-            <Points>You did {pts} / 5</Points>
+            <Points>You did {pts} points!</Points>
             <Button onClick={refreshPage}>Return</Button>
         </>
     )
@@ -45,9 +45,9 @@ const addHighscore = async (pts) => {
      body: JSON.stringify({ query: 
        `
        mutation ModifyHighscore {
-        modifyHighscore(id: "${myObj.id}", highscore: ${pts}) {
+        modifyHighscoreSD(id: "${myObj.id}", highscoreSD: ${pts}) {
           id
-          highscore
+          highscoreSD
           username
         }
       }
@@ -79,7 +79,7 @@ const addHighscore = async (pts) => {
        `
        {
        user(id: "${myObj.id}") {
-        highscore
+        highscoreSD
        }
       }
        `
@@ -88,11 +88,11 @@ const addHighscore = async (pts) => {
    try {
      const response = await fetch("http://localhost:3000/graphql/", options);
      const json = await response.json();
-     return json.data.user.highscore;
+     return json.data.user.highscoreSD;
    } catch (e) {
      console.log(e);
      return false;
    }
  };
 
-export default GameOver;
+export default GameOverSD;

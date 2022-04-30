@@ -12,11 +12,11 @@ function Scoreboard(){
     return(
       <Intro>
         <div>
-             TOP 10! 
+             SUDDEN DEATH TOP 10! 
              <br />
              <br />
               <div> {users.map(user => (
-              <li key={user.id}>{user.username} - highscore: {user.highscore}</li>
+              <li key={user.id}>{user.username} - highscore: {user.highscoreSD}</li>
             ))} </div>
         </div>
               </Intro>
@@ -29,6 +29,7 @@ const USERS_QUERY = `
     id
     username
     highscore
+    highscoreSD
   }
 }
 `

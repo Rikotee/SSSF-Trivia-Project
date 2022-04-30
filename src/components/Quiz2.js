@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import GameOver from './GameOver';
+import GameOverSD from './GameOverSD';
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
@@ -107,7 +107,7 @@ const Quiz = () => {
 
             }
             {
-                number === 500 && <GameOver pts={pts} />
+                number === 500 && <GameOverSD pts={pts} />
             }
         </QuizWindow>
     )
