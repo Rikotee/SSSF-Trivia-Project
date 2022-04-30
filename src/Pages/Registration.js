@@ -35,14 +35,23 @@ const Registration = () => {
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
-          <input type="text" onChange={u => setUserName(u.target.value)} maxLength={20}/>
+          <input
+          id="username"
+          type="text"
+          onChange={u => setUserName(u.target.value)} maxLength={20}/>
         </label>
         <label>
           <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} maxLength={20}/>
+          <input
+          id="password"
+          type="password"
+          onChange={e => setPassword(e.target.value)} maxLength={20}/>
         </label>
         <div>
-        <Button type="submit" css={btnCSS}>Submit</Button>
+        <Button
+        disabled={!username || !password}
+        type="submit"
+        css={btnCSS}>Submit</Button>
         </div>
       </form>
     </div>

@@ -22,7 +22,7 @@ const GameOver = ({pts}) => {
         <>
             <Title>Game Over</Title>
             <Points>You did {pts} points!</Points>
-            <Button onClick={refreshPage}>Retry</Button>
+            <Button onClick={refreshPage}>Return</Button>
         </>
     )
 }
