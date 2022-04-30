@@ -7,12 +7,7 @@ const Intro = styled.div`
 `;
 
 function Scoreboard(){
-    const usersNotFiltered = useLaunches()
-    const usersF = usersNotFiltered.filter(obj=> obj.highscore >= 0.1);
-    const usersS = usersF.sort(function (a, b) {
-      return b.highscore - a.highscore;
-    });
-    const users = usersS.slice(0, 10)
+    const users = useLaunches()
 
     return(
       <Intro>
