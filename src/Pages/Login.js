@@ -99,7 +99,7 @@ const Login = ({ setToken }) => {
 };
 
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired
+  setToken: PropTypes.func
 }
 
 export default Login;

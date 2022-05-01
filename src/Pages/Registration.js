@@ -86,6 +86,8 @@ const Registration = () => {
     console.log(json)
     if(json.data.registerUser == null){
       toast("Try another username or password!")
+    }else{
+      toast("Your username is now registered!")
     }
   } catch (e) {
     console.log(e);
