@@ -45,7 +45,7 @@ const Login = ({ setToken }) => {
           <input type="password" onChange={e => setPassword(e.target.value)} maxLength={20}/>
         </label>
         <div>
-          <Button type="submit" css={btnCSS}>Submit</Button>
+          <Button type="submit" css={btnCSS}>Login</Button>
 
         </div>
       </form>

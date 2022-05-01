@@ -28,6 +28,8 @@ const GameOver = ({pts}) => {
     )
 }
 
+// This will first fetch users old highscore then compare
+// it to the new one
 const addHighscore = async (pts) => {
 
     fetchHighscore().then(function(result){
@@ -66,6 +68,8 @@ const addHighscore = async (pts) => {
 }      })
  };
 
+  // This will fetch users previous highscore so that
+  // it can be compared to new one
  const fetchHighscore = async () => {
     var x = localStorage.getItem("token");
     const myObj = JSON.parse(x);

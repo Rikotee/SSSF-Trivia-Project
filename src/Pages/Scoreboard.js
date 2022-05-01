@@ -26,13 +26,12 @@ function Scoreboard(){
 const USERS_QUERY = `
 {
   users {
-    id
     username
     highscoreSD
   }
 }
 `
-
+// This will fetch 10 users that have highest points
 const useLaunches = () => {
     const [users, setUsers] = React.useState([]);
 

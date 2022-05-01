@@ -51,7 +51,7 @@ const Registration = () => {
         <Button
         disabled={!username || !password}
         type="submit"
-        css={btnCSS}>Submit</Button>
+        css={btnCSS}>Register</Button>
         </div>
       </form>
     </div>
