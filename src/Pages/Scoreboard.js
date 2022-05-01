@@ -28,7 +28,6 @@ const USERS_QUERY = `
   users {
     id
     username
-    highscore
     highscoreSD
   }
 }

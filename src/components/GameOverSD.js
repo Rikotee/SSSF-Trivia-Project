@@ -13,8 +13,9 @@ const Points = styled.p`
 
 const GameOverSD = ({pts}) => {
 
+    addHighscore(pts);
+
     const refreshPage = () => {
-        addHighscore(pts);
         window.location.reload();
     } 
     

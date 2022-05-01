@@ -73,8 +73,6 @@ const Login = ({ setToken }) => {
       {
         login(username: "${username}", password: "${password}") {
           id
-          username
-          highscore
           token
         }
       }

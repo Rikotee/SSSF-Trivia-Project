@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// This is used to save token into localStorage after user is logged in.
 export default function useToken() {
   const getToken = () => {
     const tokenString = localStorage.getItem('token');

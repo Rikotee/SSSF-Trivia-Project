@@ -3,7 +3,8 @@ import '../components/style.css'
 import Start from '../components/Start'
 import Quiz2 from '../components/Quiz2'
 
-const Trivia = () => {
+// This will start "Sudden Death" trivia mode
+const TriviaSD = () => {
   const [start, setStart] = useState(false);
 
   return (
@@ -15,4 +16,4 @@ const Trivia = () => {
   );
 }
 
-export default Trivia;
+export default TriviaSD;

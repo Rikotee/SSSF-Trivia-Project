@@ -83,7 +83,7 @@ const Registration = () => {
   try {
     const response = await fetch("http://localhost:3000/graphql/", options);
     const json = await response.json();
-    console.log(json)
+    // console.log(json)
     if(json.data.registerUser == null){
       toast("Try another username or password!")
     }else{
