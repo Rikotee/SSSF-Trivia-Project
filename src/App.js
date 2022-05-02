@@ -17,6 +17,10 @@ const Intro = styled.div`
   text-align: center;
 `;
 
+const LogOut = styled.div`
+  text-align: right;
+`;
+
 const btnCSS = css`
     
 `;
@@ -29,16 +33,16 @@ const App = () => {
   }
 
   return (
-    <Intro>
-      <div>
-          <LogOutButton onClick={() => {
+
+    <div>
+          <LogOut>
+            <LogOutButton onClick={() => {
               localStorage.clear();
               window.location.reload();
-              }} css={btnCSS}>
-                Logout
-          </LogOutButton>
-      </div>
-      <div>
+              }} css={btnCSS}>Logout</LogOutButton>
+    </LogOut>
+    <Intro>
+
           <Router>
             <nav>
               <Link to="/">
@@ -66,8 +70,8 @@ const App = () => {
               <Route path="*" element={<ErrorPage />} />
             </Routes>
       </Router>
-      </div>
     </Intro>
+    </div>
   );
 }
 
