@@ -7,15 +7,17 @@ const Intro = styled.div`
   text-align: center;
 `;
 
+const Image = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 const Home = () => {
     return(
         <Intro>
-        <div>
+        <Image>
             <img src={logo}  alt="Logo" />
-            <h1>
-                Welcome to the Trivia!
-            </h1>
-        </div>
+        </Image>
         </Intro>
     )
 }

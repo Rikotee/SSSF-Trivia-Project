@@ -11,6 +11,7 @@ const Points = styled.p`
     margin-bottom: 3em;
 `;
 
+// This is "game over page for 5 questions mode"
 const GameOver = ({pts}) => {
 
     addHighscore(pts);

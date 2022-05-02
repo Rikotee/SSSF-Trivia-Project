@@ -27,7 +27,7 @@ const Option = styled.button`
     padding: 15px 30px;
     text-decoration: none;
     color: #616A94;
-    background-color: #161A31;
+    background-color: #fb9725;
     transition: 0.3s;
     font-size: 1em;
     outline: none;
