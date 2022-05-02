@@ -1,16 +1,14 @@
 import React from "react";
+import logo from '../components/image/logo.png';
 
 const Home = () => {
     return(
         <div>
+            <img src={logo}  alt="Logo" />
             <h1>
-                Welcome to my Website
+                Welcome to the Trivia!
             </h1>
-{/*             <button
-            onClick={() => {
-                console.log('test')
-            }}
-            > test to console</button> */}
+
         </div>
     )
 }

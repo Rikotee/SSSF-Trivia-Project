@@ -35,8 +35,8 @@ const addHighscore = async (pts) => {
     fetchHighscore().then(function(result){
      if(pts >= result) { 
 
-    var x = localStorage.getItem("token");
-    const myObj = JSON.parse(x);
+    var token = localStorage.getItem("token");
+    const myObj = JSON.parse(token);
 
    const options = {
      method: 'POST',
@@ -65,14 +65,14 @@ const addHighscore = async (pts) => {
      console.log(e);
      return false;
    }
-}      })
+   }})
  };
 
   // This will fetch users previous highscore so that
   // it can be compared to new one
  const fetchHighscore = async () => {
-    var x = localStorage.getItem("token");
-    const myObj = JSON.parse(x);
+    var token = localStorage.getItem("token");
+    const myObj = JSON.parse(token);
 
    const options = {
      method: 'POST',

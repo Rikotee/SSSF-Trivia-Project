@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
 
-export const Button = styled.button`
+export const LogOutButton = styled.button`
     border: 1px solid #616A94;
     border-radius: 20px;
-    padding: 10px 25px;
+    padding: 4px 7px;
     margin: 5px;
+    margin-right: 10px;
     text-decoration: none;
     color: #616A94;
     background-color: #fb9725;
     transition: 0.3s;
-    font-size: 1em;
+    font-size: 0,1em;
     cursor: pointer;
     outline: none;
+    float: right;
 
     &:hover {
         color: white;
@@ -20,4 +22,4 @@ export const Button = styled.button`
     }
 `;
 
-export default Button
+export default LogOutButton

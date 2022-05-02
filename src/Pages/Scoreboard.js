@@ -16,7 +16,7 @@ function Scoreboard(){
              <br />
              <br />
               <div> {users.map(user => (
-              <li key={user.id}>{user.username} - highscore: {user.highscoreSD}</li>
+              <li key={user.username}>{user.username} - highscore: {user.highscoreSD}</li>
             ))} </div>
         </div>
               </Intro>
@@ -36,8 +36,8 @@ const useLaunches = () => {
     const [users, setUsers] = React.useState([]);
 
     React.useEffect(() => {
-      var x = localStorage.getItem("token");
-      const myObj = JSON.parse(x);
+      var token = localStorage.getItem("token");
+      const myObj = JSON.parse(token);
 
       fetch("http://localhost:3000/graphql/", {
       method: "POST",

@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import useToken from './components/useToken';
 import styled, { css } from 'styled-components/macro'
 import Button from './components/Button';
-/* import logo from './components/image/logo.png'; */
+import LogOutButton from './components/LogOutButton';
 
 const Intro = styled.div`
   margin-top: 1em;
@@ -18,30 +18,28 @@ const Intro = styled.div`
 `;
 
 const btnCSS = css`
-    margin-top: 1em;
+    
 `;
 
 const App = () => {
   const { token, setToken } = useToken();
 
   if(!token) {
-    //console.log(token)
     return <Login setToken={setToken} />
   }
 
   return (
     <Intro>
-
-{/*             <img src={logo}  alt="Logo" /> */}
-
-            <Button onClick={() => {
+            <LogOutButton onClick={() => {
               localStorage.clear();
               window.location.reload();
-              }} css={btnCSS}>Logout</Button>
+              }} css={btnCSS}>Logout</LogOutButton>
           <Router>
             <nav>
-              <Link to="/">  Home  </Link>
-              <br />
+              <Link to="/">
+                  <Button css={btnCSS}> Homepage </Button>
+              </Link>
+
               <Link to="/scoreboard">
                   <Button css={btnCSS}> Scoreboard! </Button>
               </Link>
@@ -62,12 +60,7 @@ const App = () => {
               <Route path="/triviasd" element={<TriviaSD />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
-            <div>
-
-            </div>
-
       </Router>
-
     </Intro>
   );
 }

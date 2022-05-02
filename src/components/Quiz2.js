@@ -51,7 +51,9 @@ const Question = styled.div`
     margin: 0 auto;
 `;
 
-const Quiz = () => {
+// This is used in "Sudden Death" trivia mode
+// It will fetch 500 questions
+const Quiz2 = () => {
 
     const [quiz, setQuiz] = useState([]);
     const [number, setNumber] = useState(0);
@@ -69,7 +71,6 @@ const Quiz = () => {
         } else{
             setNumber(500)
         }
-        
     }
 
     useEffect(() => {
@@ -77,24 +78,19 @@ const Quiz = () => {
         axios.get('https://opentdb.com/api.php?amount=500&type=multiple')
             .then(res => {
                 setQuiz(res.data.results.map(item => (
-
                     {
                         question: item.question,
                         options: shuffle([...item.incorrect_answers, item.correct_answer]),
                         answer: item.correct_answer
                     }
-
                 )));
             })
             .catch(err => console.error(err))
-
     }, []);
-
 
     return (
         <QuizWindow>
             { quiz[number] &&
-
                 <>
                     <Question dangerouslySetInnerHTML={{ __html: quiz[number].question }}></Question>
 
@@ -104,7 +100,6 @@ const Quiz = () => {
                         ))}
                     </Options>
                 </>
-
             }
             {
                 number === 500 && <GameOverSD pts={pts} />
@@ -113,4 +108,4 @@ const Quiz = () => {
     )
 }
 
-export default Quiz
+export default Quiz2
