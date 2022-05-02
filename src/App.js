@@ -33,7 +33,6 @@ const App = () => {
   }
 
   return (
-
     <div>
           <LogOut>
             <LogOutButton onClick={() => {
@@ -42,7 +41,6 @@ const App = () => {
               }} css={btnCSS}>Logout</LogOutButton>
     </LogOut>
     <Intro>
-
           <Router>
             <nav>
               <Link to="/">

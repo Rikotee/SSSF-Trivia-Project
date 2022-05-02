@@ -14,7 +14,6 @@ export const LogOutButton = styled.button`
     font-size: 0,1em;
     cursor: pointer;
     outline: none;
-/*     float: right; */
 
     &:hover {
         color: white;
