@@ -5,7 +5,7 @@ export const LogOutButton = styled.button`
     border: 1px solid #616A94;
     border-radius: 20px;
     padding: 4px 7px;
-    margin: 5px;
+    margin-top: 5px;
     margin-right: 10px;
     text-decoration: none;
     color: #616A94;

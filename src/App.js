@@ -30,10 +30,15 @@ const App = () => {
 
   return (
     <Intro>
-            <LogOutButton onClick={() => {
+      <div>
+          <LogOutButton onClick={() => {
               localStorage.clear();
               window.location.reload();
-              }} css={btnCSS}>Logout</LogOutButton>
+              }} css={btnCSS}>
+                Logout
+          </LogOutButton>
+      </div>
+      <div>
           <Router>
             <nav>
               <Link to="/">
@@ -61,6 +66,7 @@ const App = () => {
               <Route path="*" element={<ErrorPage />} />
             </Routes>
       </Router>
+      </div>
     </Intro>
   );
 }

@@ -2,11 +2,11 @@ import React from "react";
 import styled from 'styled-components/macro'
 
 const Intro = styled.div`
-  margin-top: 3em;
+  margin-top: 1em;
   text-align: center;
 `;
 
-function Scoreboard(){
+const Scoreboard = () => {
     const users = useLaunches()
 
     return(
@@ -15,11 +15,13 @@ function Scoreboard(){
              SUDDEN DEATH TOP 10! 
              <br />
              <br />
+             <ul>
               <div> {users.map(user => (
-              <li key={user.username}>{user.username} - highscore: {user.highscoreSD}</li>
+              <li key={user.username} >{user.username} - highscore: {user.highscoreSD}</li>
             ))} </div>
+            </ul>
         </div>
-              </Intro>
+      </Intro>
     )
 }
 
