@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
 
 const Intro = styled.div`
-  margin-top: 5em;
+  margin-top: 2em;
   text-align: center;
 `;
 

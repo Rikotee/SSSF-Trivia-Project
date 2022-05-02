@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
 
 const Intro = styled.div`
-  margin-top: 5em;
+  margin-top: 2em;
   text-align: center;
 `;
 
@@ -49,11 +49,12 @@ const Login = ({ setToken }) => {
 
         </div>
       </form>
-
+      <ul>
       <li className="menu__icon" onClick={() => setShow(true)}>
       <h4>Need to sign in? Click here!</h4>
         { show ? <Registration/> : null }
         </li>
+        </ul>
     </div>
         </Intro>
   )
