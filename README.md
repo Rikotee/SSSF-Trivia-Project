@@ -1,3 +1,30 @@
+# Trivia
+
+This is the Web-Frontend of the app Trivia. The application also contains Backend. Be sure to check out that repository to get a better idea how this application functions as a whole.
+
+## Features
+
+The application allows to create own username and when played best scores are saved to a database.
+
+## Instructions
+1. Login and registration
+
+   <img src="https://user-images.githubusercontent.com/64253189/146197114-63e1a4d1-7b50-4376-b655-c4d25053e9c8.jpg" width="200" />
+   <img src="https://user-images.githubusercontent.com/64253189/146197216-5c2c8202-a801-4ba8-84dd-0172a3b65efd.jpg" width="200" />
+   
+   Login or register in the app first. 
+   
+2. Home
+
+   <img src="https://user-images.githubusercontent.com/64253189/146197571-31fc3393-f897-4316-9ca6-2dcf5a4c5e68.jpg" width="200" />
+   
+   This is the home screen.
+   
+3. Scoreboard
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
