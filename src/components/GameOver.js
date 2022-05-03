@@ -59,9 +59,7 @@ const addHighscore = async (pts) => {
      }),
    };
    try {
-     const response =  fetch("http://localhost:3000/graphql/", options);
-     const json = response.json();
-     console.log(json)
+     fetch("http://localhost:3000/graphql/", options);
    } catch (e) {
      console.log(e);
      return false;
@@ -78,6 +76,7 @@ const addHighscore = async (pts) => {
    const options = {
      method: 'POST',
      headers: {
+      Authorization: `Bearer ${myObj.token}`,
        'Content-Type': 'application/json',
        Accept: 'application/json',
      },
