@@ -6,7 +6,7 @@ This is the Web-Frontend of the app Trivia. The application also contains Backen
 
 The application allows to create own username and when played best scores are saved to a database.
 
-Trivia uses third party API from: [opentdb Pages](https://opentdb.com/)
+Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
 
 ## Instructions
 1. Login and registration
