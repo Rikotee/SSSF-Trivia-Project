@@ -12,22 +12,21 @@ Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
 1. Login and registration
 
    Use of the application requires registration.
-   ![This is an register image](http://users.metropolia.fi/~teemutr/queryimg/register.jpg | height="200px")
-   <img src="http://users.metropolia.fi/~teemutr/queryimg/register.jpg" height="200">
+   <img src="http://users.metropolia.fi/~teemutr/queryimg/register.jpg" height="300">
 
    After registration you can log in
-   ![This is an login image](http://users.metropolia.fi/~teemutr/queryimg/loginapp.jpg | height="200px")
+   <img src="http://users.metropolia.fi/~teemutr/queryimg/loginapp.jpg" height="300">
 
 2. Trivia
 
    There are two game modes: "5 Questions" and "Sudden Death".
    Questions are multiple choice question.
-   ![This is an login image](http://users.metropolia.fi/~teemutr/queryimg/trivia.jpg | height="200px")
-   
+   <img src="http://users.metropolia.fi/~teemutr/queryimg/trivia.jpg" height="300">
+
 3. Scoreboard
 
    You will find the top ten scores in the scoreboard.
-   ![This is an scoreboard image](http://users.metropolia.fi/~teemutr/queryimg/scoreb.jpg | height="200px")
+   <img src="http://users.metropolia.fi/~teemutr/queryimg/scoreb.jpg" height="300">
 
 
 
