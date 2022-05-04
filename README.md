@@ -11,19 +11,22 @@ Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
 ## Instructions
 1. Login and registration
 
-   
-   
-   Login or register in the app first. 
-   
-2. Home
+   Use of the application requires registration.
+   ![This is an register image](http://users.metropolia.fi/~teemutr/queryimg/register.jpg)
 
-   
-   
-   This is the home screen.
+   After registration you can log in
+   ![This is an login image](http://users.metropolia.fi/~teemutr/queryimg/loginapp.jpg)
+
+2. Trivia
+
+   There are two game modes: "5 Questions" and "Sudden Death".
+   Questions are multiple choice question.
+   ![This is an login image](http://users.metropolia.fi/~teemutr/queryimg/trivia.jpg)
    
 3. Scoreboard
 
-
+   You will find the top ten scores in the scoreboard.
+   ![This is an scoreboard image](http://users.metropolia.fi/~teemutr/queryimg/scoreb.jpg)
 
 
 

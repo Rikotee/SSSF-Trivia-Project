@@ -81,7 +81,7 @@ const Registration = () => {
     }),
   };
   try {
-    const response = await fetch("http://localhost:3000/graphql/", options);
+    const response = await fetch("https://env-4867079.jelastic.metropolia.fi/graphql/", options);
     const json = await response.json();
     // console.log(json)
     if(json.data.registerUser == null){
