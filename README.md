@@ -15,10 +15,12 @@ Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
    <br/>
    <img align="left" src="http://users.metropolia.fi/~teemutr/queryimg/register.jpg" height="400" >
    <br/>
-
+   <br/>
    After registration you can log in
+   <br/>
    <img align="left" src="http://users.metropolia.fi/~teemutr/queryimg/loginapp.jpg" height="400">
-
+   <br/>
+   <br/>
 2. Trivia
 
    There are two game modes: "5 Questions" and "Sudden Death".
