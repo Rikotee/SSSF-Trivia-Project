@@ -12,7 +12,9 @@ Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
 1. Login and registration
 
    Use of the application requires registration.
+   <br/>
    <img align="left" src="http://users.metropolia.fi/~teemutr/queryimg/register.jpg" height="400" >
+   <br/>
 
    After registration you can log in
    <img align="left" src="http://users.metropolia.fi/~teemutr/queryimg/loginapp.jpg" height="400">
