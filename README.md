@@ -8,6 +8,15 @@ The application allows to create own username and when played best scores are sa
 
 Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
 
+## Getting started
+
+* Clone the repository and run npm i in order to install the required packages.
+* cd to cloned repository.
+
+In the project directory, you can run:
+
+### `npm start`
+
 ## Instructions
 1. Login and registration
 
@@ -32,16 +41,4 @@ Trivia uses third party API from: [Open Trivia DB](https://opentdb.com/)
 
    <img src="http://users.metropolia.fi/~teemutr/queryimg/scoreb.jpg" width="250" />
 
-
-## Getting started
-
-* Clone the repository and run npm i in order to install the required packages.
-* cd to cloned repository.
-
-In the project directory, you can run:
-
-### `npm start`
-
-
-
-
+   
