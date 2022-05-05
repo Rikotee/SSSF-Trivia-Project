@@ -9,14 +9,14 @@ toast.configure()
 const QuizWindow = styled.div`
     text-align: center;
     font-size: clamp(20px, 2.5vw, 24px);
-    margin-top: 10vh;
+    margin-top: 3vh;
 `;
 
 const Options = styled.div`
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin: 2em auto;
+    margin: 1em auto;
 
     @media screen and (min-width: 1180px) {
         width: 50%;
