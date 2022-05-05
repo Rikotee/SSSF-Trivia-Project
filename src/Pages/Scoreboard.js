@@ -50,6 +50,6 @@ const useLaunches = () => {
       .then(data => setUsers(data.data.users))
     }, []);
     return users;
-  }
+  };
 
 export default Scoreboard;

@@ -14,6 +14,6 @@ const TriviaSD = () => {
       { start ? <Quiz2 /> : <Start props={setStart} />} 
     </div>
   );
-}
+};
 
 export default TriviaSD;

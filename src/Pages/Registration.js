@@ -26,7 +26,7 @@ const Registration = () => {
       password
     });
 
-  }
+  };
 
   return(
     <Intro>
@@ -57,7 +57,7 @@ const Registration = () => {
     </div>
     </Intro>
   )
-}
+};
 
  const registerUser = async (credentials) => {
    const username = credentials.username

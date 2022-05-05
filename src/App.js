@@ -30,7 +30,7 @@ const App = () => {
 
   if(!token) {
     return <Login setToken={setToken} />
-  }
+  };
 
   return (
     <div>
@@ -48,15 +48,15 @@ const App = () => {
               </Link>
 
               <Link to="/scoreboard">
-                  <Button css={btnCSS}> Scoreboard! </Button>
+                  <Button css={btnCSS}> Scoreboard </Button>
               </Link>
 
               <Link to="/trivia">
-                  <Button css={btnCSS}> 5 Questions! </Button>
+                  <Button css={btnCSS}> 5 Questions </Button>
               </Link>
 
               <Link to="/triviasd">
-                  <Button css={btnCSS}> Sudden Death! </Button>
+                  <Button css={btnCSS}> Sudden Death </Button>
               </Link>
             </nav>
             <Routes>
@@ -71,6 +71,6 @@ const App = () => {
     </Intro>
     </div>
   );
-}
+};
 
 export default App;

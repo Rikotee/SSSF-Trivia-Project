@@ -20,6 +20,6 @@ const Home = () => {
         </Image>
         </Intro>
     )
-}
+};
 
 export default Home;
